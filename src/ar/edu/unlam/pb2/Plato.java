@@ -9,6 +9,17 @@ public class Plato {
 	
 	
 	
+	public Plato(Double contadorSal) {
+		
+		this.contadorSal = contadorSal;
+		
+				
+	}
+
+	public Double getContadorSal() {
+		return contadorSal;
+	}
+
 	public Plato(String nombrePlato) {
 		this.nombrePlato = nombrePlato;
 		ingredientes = new ArrayList<Ingredientes>();

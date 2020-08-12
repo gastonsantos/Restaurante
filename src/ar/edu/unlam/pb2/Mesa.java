@@ -6,7 +6,9 @@ import java.util.ArrayList;
 public class Mesa {  
 	
 	private ArrayList<Plato> platos = new ArrayList<Plato>();
-	private double contadorSal;
+	private Double contadorSal=0.0;
+
+	
 	
 	
 	
@@ -41,23 +43,27 @@ public class Mesa {
 	
 	
 	public double ContadorDeSalEnMesa(){
-		for(Plato e: platos){
+		
+			for(Plato e: platos){
+
 			
-			contadorSal+=e.ContadorDeSalEnPLato();
-				
-		}
+				contadorSal+= e.getContadorSal();
+			}
+		
 		System.out.println("LA MESA TIENE EN TOTAL: "+contadorSal);
 		return contadorSal;
 	}
 	
+
+
 		public boolean MesaAptaParHipertensos(){
 			
 			if(contadorSal>1.3){
-				System.out.println("LA MESA TIENE EN TOTAL: "+contadorSal);
+				
 				System.out.println("Mesa No apta para Hipertensos");
 				return false;
 			}else{
-				System.out.println("LA MESA TIENE EN TOTAL: "+contadorSal);
+				
 				System.out.println("Mesa apta para Hipertensos");
 				return true;
 			}

@@ -59,15 +59,6 @@ public class Plato {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-
-	
-	
 
 	@Override
 	public int hashCode() {

@@ -8,10 +8,8 @@ public class Mesa {
 	
 	private HashSet<Plato> platos = new HashSet<Plato>();
 	private Double contadorSal=0.0;
-
-	  
 	
-	  
+
 	
 	public HashSet<Plato> getPlatos() {
 		return platos;
@@ -30,7 +28,10 @@ public class Mesa {
 	
 	public void AgregarPlato(Plato plato1) {
 		
+		
 		platos.add(plato1);
+		
+		
 	}
 	public void EliminarPlato(Plato plato1) {
 		
@@ -55,6 +56,11 @@ public class Mesa {
 		return contadorSal;
 	}
 	
+	public Integer contadorDePlatosEnMesa() {
+		
+		int contadorPlatos = platos.size();
+		return contadorPlatos;
+	}
 
 
 		public boolean MesaAptaParHipertensos(){
@@ -72,10 +78,5 @@ public class Mesa {
 			
 		}
 		
-	
-	
-	
-	
-	
 
 }

@@ -1,22 +1,23 @@
 package ar.edu.unlam.pb2;
 
 
-import java.util.ArrayList;
+
+import java.util.HashSet;
 
 public class Mesa {  
 	
-	private ArrayList<Plato> platos = new ArrayList<Plato>();
+	private HashSet<Plato> platos = new HashSet<Plato>();
 	private Double contadorSal=0.0;
 
+	  
 	
+	  
 	
-	
-	
-	public ArrayList<Plato> getPlatos() {
+	public HashSet<Plato> getPlatos() {
 		return platos;
 	}
 
-	public void setPlatos(ArrayList<Plato> platos) {
+	public void setPlatos(HashSet<Plato> platos) {
 		this.platos = platos;
 	}
 
@@ -24,7 +25,7 @@ public class Mesa {
 
 	public Mesa() {
 		
-		platos = new ArrayList<Plato>();
+		platos = new HashSet<Plato>();
 	}
 	
 	public void AgregarPlato(Plato plato1) {

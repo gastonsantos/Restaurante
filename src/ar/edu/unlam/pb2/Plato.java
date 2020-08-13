@@ -7,13 +7,13 @@ public class Plato {
 	private String nombrePlato;
 	private Double contadorSal=0.0;
 	
-	
+	  
 	
 	public Plato(Double contadorSal) {
 		
 		this.contadorSal = contadorSal;
 		
-				
+				  
 	}
 
 	public Double getContadorSal() {
@@ -66,6 +66,33 @@ public class Plato {
 	
 	
 
+	
+	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((nombrePlato == null) ? 0 : nombrePlato.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Plato other = (Plato) obj;
+		if (nombrePlato == null) {
+			if (other.nombrePlato != null)
+				return false;
+		} else if (!nombrePlato.equals(other.nombrePlato))
+			return false;
+		return true;
+	}
 
 	@Override
 	public String toString() {

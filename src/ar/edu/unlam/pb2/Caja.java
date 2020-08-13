@@ -12,7 +12,13 @@ public class Caja {
 		
 		Plato plato1 = new Plato ("Omelete");
 		Plato plato2 = new Plato ("Bolognesa");
+		Plato plato3 = new Plato("Macarrones");
 		
+		plato3.AgregarIngrediente(ingrediente2);
+		plato3.AgregarIngrediente(ingrediente3);
+		plato3.ContadorDeSalEnPLato();
+		plato3.PlatoDisponibleParaHipertensos();
+	
 		plato2.AgregarIngrediente(ingrediente1);
 		plato2.AgregarIngrediente(ingrediente2);
 		plato2.AgregarIngrediente(ingrediente2);
@@ -29,9 +35,10 @@ public class Caja {
 		
 		mesa1.AgregarPlato(plato1);
 		mesa1.AgregarPlato(plato2);
+		mesa1.AgregarPlato(plato3);
 		mesa1.ContadorDeSalEnMesa();
 		mesa1.MesaAptaParHipertensos();
-		//mesa1.MostrarNombreEIngredietes();
+		mesa1.MostrarNombreEIngredietes();
 		
 		
 	}  

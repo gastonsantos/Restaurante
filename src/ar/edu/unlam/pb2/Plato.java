@@ -38,7 +38,7 @@ public class Plato {
 	
 
 
-	public double ContadorDeSalEnPLato(){
+	public Double ContadorDeSalEnPLato(){
 		
 		for(Ingredientes e : ingredientes){
 			contadorSal+=e.getCantidadDeSal();
@@ -48,7 +48,7 @@ public class Plato {
 		return contadorSal;
 	}
 	
-	public boolean PlatoDisponibleParaHipertensos(){
+	public Boolean PlatoDisponibleParaHipertensos(){
 		if(contadorSal >0.5){
 			System.out.println("El PLATO NO ES APTO");
 			return false;

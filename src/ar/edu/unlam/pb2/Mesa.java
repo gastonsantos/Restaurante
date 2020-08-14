@@ -8,6 +8,7 @@ public class Mesa {
 	
 	private HashSet<Plato> platos = new HashSet<Plato>();
 	private Double contadorSal=0.0;
+	private Double contadorAzucar= 0.0;
 	
 
 	
@@ -44,6 +45,17 @@ public class Mesa {
 	}
 	
 	
+	public Double contadorDeAzucarEnMesa() {
+		
+		for (Plato e: platos) {
+			
+			contadorAzucar+=e.getContadorAzucar();
+		}
+		return contadorAzucar;
+	}
+	
+
+
 	public double ContadorDeSalEnMesa(){
 		
 			for(Plato e: platos){
@@ -56,12 +68,16 @@ public class Mesa {
 		return contadorSal;
 	}
 	
-	public Integer contadorDePlatosEnMesa() {
+public Boolean MesaAptaDiabeticos() {
+	
+	if(contadorAzucar>1.3) {
 		
-		int contadorPlatos = platos.size();
-		return contadorPlatos;
+		return false;
+		
+	}else {
+		return true;
 	}
-
+}
 
 		public boolean MesaAptaParHipertensos(){
 			
@@ -77,6 +93,13 @@ public class Mesa {
 		
 			
 		}
+		
+		public Integer contadorDePlatosEnMesa() {
+			
+			int contadorPlatos = platos.size();
+			return contadorPlatos;
+		}
+
 		
 
 }

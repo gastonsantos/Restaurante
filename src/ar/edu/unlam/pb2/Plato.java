@@ -6,9 +6,15 @@ public class Plato {
 	private ArrayList<Ingredientes> ingredientes = new ArrayList<Ingredientes>();
 	private String nombrePlato;
 	private Double contadorSal=0.0;
+	private Double contadorAzucar= 0.0;
+	
 	
 	  
 	
+	public Double getContadorAzucar() {
+		return contadorAzucar;
+	}
+
 	public Plato(Double contadorSal) {
 		
 		this.contadorSal = contadorSal;
@@ -37,6 +43,17 @@ public class Plato {
 	}
 	
 
+	
+	public Double contadorDeAzucarEnPLato() {
+		
+		for(Ingredientes e: ingredientes) {
+			
+			contadorAzucar+= e.getCantidadDeAzucar();
+		}
+		return contadorAzucar;
+	}
+	
+	
 
 	public Double ContadorDeSalEnPLato(){
 		
@@ -47,6 +64,20 @@ public class Plato {
 		System.out.println("SAL: "+contadorSal);
 		return contadorSal;
 	}
+	
+	
+	public Boolean PlatoDisponibleDiabeticos() {
+		
+		
+		if(contadorAzucar>0.5) {
+			
+			return false;
+		
+		}else {
+			return true;
+	}
+	}
+	
 	
 	public Boolean PlatoDisponibleParaHipertensos(){
 		if(contadorSal >0.5){
